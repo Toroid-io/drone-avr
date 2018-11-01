@@ -12,8 +12,6 @@ directory. This may be overridden passing a `command` option.
 pipeline:
   kicad:
     image: toroid/drone-avr
-    dependencies:
-      - https://github.com/toroid-io/toroid-c-library   # Clone in current directory
     projects:
       - source: Project1                                # Makefile folder
         dependencies:
