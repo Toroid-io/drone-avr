@@ -1,0 +1,33 @@
+workspace:
+  base: /go
+  path: src/toroid.io/drone-plugins/drone-avr
+
+pipeline:
+  buildgo:
+    image: golang
+    environment:
+      - CGO_ENABLED=0
+      - GOOS=linux
+      - GOARCH=amd64
+    commands:
+      - go build -ldflags "-s -w -X main.build=$DRONE_BUILD_NUMBER" -a -tags netgo
+
+  publish:
+    image: plugins/docker
+    repo: toroid/drone-avr
+    tags: [latest, 0.1]
+    when:
+      branch: master
+      event: deployment
+      environment: production
+    secrets: [docker_username, docker_password]
+
+  publish-test:
+    image: plugins/docker
+    repo: toroid/drone-avr
+    tags: ${DRONE_DEPLOY_TO}
+    when:
+      event: deployment
+      environment:
+        exclude: production
+    secrets: [docker_username, docker_password]
