@@ -13,6 +13,12 @@
 			"path": "github.com/urfave/cli",
 			"revision": "b67dcf995b6a7b7f14fad5fcb7cc5441b05e814b",
 			"revisionTime": "2018-10-29T21:32:00Z"
+		},
+		{
+			"checksumSHA1": "BGm8lKZmvJbf/YOJLeL1rw2WVjA=",
+			"path": "golang.org/x/crypto/ssh/terminal",
+			"revision": "4d3f4d9ffa16a13f451c3b2999e9c49e9750bf06",
+			"revisionTime": "2018-10-23T16:52:47Z"
 		}
 	],
 	"rootPath": "drone-avr"
