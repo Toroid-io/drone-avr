@@ -19,6 +19,12 @@
 			"path": "golang.org/x/crypto/ssh/terminal",
 			"revision": "4d3f4d9ffa16a13f451c3b2999e9c49e9750bf06",
 			"revisionTime": "2018-10-23T16:52:47Z"
+		},
+		{
+			"checksumSHA1": "BW0KOqvgOUoyFwEQKWTdoEJrR6c=",
+			"path": "golang.org/x/sys/unix",
+			"revision": "9b800f95dbbc54abff0acf7ee32d88ba4e328c89",
+			"revisionTime": "2018-10-31T12:20:39Z"
 		}
 	],
 	"rootPath": "drone-avr"
